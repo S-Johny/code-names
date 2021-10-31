@@ -1,0 +1,51 @@
+@import 'variables';
+
+$menu-item-color: #1E201D;
+
+.navbar-container {
+    margin: 34px 0;
+    border:  solid;
+    border-width: 3px 1px 3px 1px;
+    height: 60px;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.code-name-head {
+    text-transform: uppercase;
+    margin-left: 15px;
+}
+
+.navbar-logo-background {
+    margin-left: 34px;
+    border-radius: 50%;
+    height: 120px;
+    background-color: $default-background-color;
+
+    .navbar-logo {
+        height: 120px; 
+    }
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-basis: 40%;
+}
+
+.menu-item {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgba($menu-item-color, $alpha: 0.6)
+}
+
+.active-link {
+    color: $active-color;
+}

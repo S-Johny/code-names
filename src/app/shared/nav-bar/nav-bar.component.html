@@ -1,1 +1,21 @@
-<p>nav-bar works!</p>
+<div class="navbar-container">
+    <div class="header-container">
+        <div class="navbar-logo-background">
+            <img src="assets/code-names-logo.png" class="navbar-logo">
+        </div>
+        <div class="code-name-head">
+            Krycí jméno drak
+        </div>
+    </div>
+
+    <div class="menu-container">
+        <a
+            class="menu-item"
+            [routerLink]="item.path"
+            routerLinkActive="active-link"
+            *ngFor="let item of menuItem"
+          >
+            <span class="menu-label">{{ item.site }}</span>
+    </a>
+    </div>
+</div>
