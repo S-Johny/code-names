@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "code-names-e4ebb"
+  },
+  "targets": {
+    "code-names-e4ebb": {
+      "hosting": {
+        "prod": [
+          "code-name-dragon"
+        ]
+      }
+    }
+  }
+}
