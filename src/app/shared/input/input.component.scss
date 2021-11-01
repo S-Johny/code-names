@@ -1,0 +1,50 @@
+@import 'variables';
+
+$background-input-color: #C4C4C4;
+
+.input-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .label {
+    color: $text-dark;
+    margin-right: 15px;
+    font-size: 16px;
+  }
+  
+  :host ::ng-deep input {
+    background-color: $background-input-color;
+    padding: 5px 20px 5px 10px;
+    height: 31px;
+    color: black;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+    font-weight: 400;
+  
+    &::placeholder {
+      opacity: 0.6;
+    }
+  
+  
+    &:focus, &:active {
+      box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.32);
+    }
+  
+    &.ng-invalid.ng-touched {
+      border: solid 1px $active-color;
+      box-shadow: 0 0 15px 0 rgba($active-color, 0.8);
+  
+      &:focus, &:active {
+        box-shadow: 0 0 10px 0 rgba(224, 63, 62, 0.4);
+      }
+    }
+  
+    &[disabled], &.disabled {
+      opacity: 0.5;
+      pointer-events: none;
+      user-select: none;
+    }
+  }
+  

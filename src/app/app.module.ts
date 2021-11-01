@@ -9,6 +9,13 @@ import { TeamsComponent } from './sites/teams/teams.component';
 import { LoreComponent } from './sites/lore/lore.component';
 import { GameInfoComponent } from './sites/game-info/game-info.component';
 import { SignInFormComponent } from './sites/sign-in-form/sign-in-form.component';
+import { LogInFormComponent } from './sites/log-in-form/log-in-form.component';
+import { TeamProfileComponent } from './sites/team-profile/team-profile.component';
+import { InputComponent } from './shared/input/input.component';
+import { environment } from 'src/environments/environment';
+
+import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -18,11 +25,16 @@ import { SignInFormComponent } from './sites/sign-in-form/sign-in-form.component
     TeamsComponent,
     LoreComponent,
     GameInfoComponent,
-    SignInFormComponent
+    SignInFormComponent,
+    LogInFormComponent,
+    TeamProfileComponent,
+    InputComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore()),
   ],
   providers: [],
   bootstrap: [AppComponent]

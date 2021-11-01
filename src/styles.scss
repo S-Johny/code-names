@@ -3,6 +3,8 @@
 html,
 body {
   height: 100%;
+  font-family: 'Alegreya', serif;
+  font-family: 'Roboto Mono', monospace;
 }
 
 body {
@@ -21,4 +23,27 @@ input,
 button {
   border: none;
   background: none;
+}
+
+.separating-line {
+  height: 1.5px;
+  background-color: #C4C4C4;
+  width: 100%;
+  margin: 15px 0;
+}
+
+.site-content {
+  margin: 40px 280px;
+  width: 100%;
+
+  h1 {
+    font-size: 27px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+  }
 }

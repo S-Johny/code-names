@@ -4,6 +4,7 @@ import { GameInfoComponent } from './sites/game-info/game-info.component';
 import { HomeComponent } from './sites/home/home.component';
 import { LoreComponent } from './sites/lore/lore.component';
 import { SignInFormComponent } from './sites/sign-in-form/sign-in-form.component';
+import { TeamProfileComponent } from './sites/team-profile/team-profile.component';
 import { TeamsComponent } from './sites/teams/teams.component';
 
 const routes: Routes = [
@@ -16,6 +17,11 @@ const routes: Routes = [
     path: 'game-info',
     component: GameInfoComponent,
     data: { title: 'Game Info' },
+  },
+  {
+    path: 'team-profile',
+    component: TeamProfileComponent,
+    data: { title: 'Team Profile' },
   },
   {
     path: 'teams',
