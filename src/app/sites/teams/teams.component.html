@@ -1,1 +1,12 @@
-<p>teams works!</p>
+<div class='teams-container'>
+  <div class='site-content teams-text'>
+    <h1>TAJNÉ SLUŽBY</h1>
+    <div *ngFor='let team of teams' class='team-container'>
+      <h3>
+        {{team.name}}
+      </h3>
+      <p>Zkratka: {{team.shortcut}}</p>
+      <p class='motto'>Motto: {{team.motto}}</p></div>
+  </div>
+  <img alt='left' class='teams-image-left' src='assets/teams1.svg'>
+</div>
