@@ -13,15 +13,17 @@ import { TeamProfileComponent } from './sites/team-profile/team-profile.componen
 import { InputComponent } from './shared/input/input.component';
 import { environment } from 'src/environments/environment';
 
-import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { AuthorsComponent } from './sites/authors/authors.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     HomeComponent,
+    FooterComponent,
     TeamsComponent,
     LoreComponent,
     SignInFormComponent,

@@ -1,0 +1,30 @@
+@import 'variables';
+footer {
+  font-size: 12px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  width: 100%;
+
+  .footer-line {
+    height: 1.5px;
+    background-color: $text-dark;
+    width: 100%;
+  }
+
+  .text {
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+
+    .copyright {
+      font-size: 24px;
+      margin-top: -5px;
+    }
+
+    p {
+      margin-left: 5px;
+    }
+  }
+}
+
