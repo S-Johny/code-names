@@ -10,10 +10,10 @@ export class NavBarComponent {
 
   menuItem: {site: string; path: string}[] = [
     {site: 'home', path: 'home'},
-    {site: 'registrace', path: 'sign-in'},
-    {site: 'pro hrače', path: 'game-info'},
-    {site: 'týmy', path: 'teams'},
     {site: 'přiběh', path: 'lore'},
+    {site: 'registrace', path: 'sign-in'},
+    {site: 'týmy', path: 'teams'},
+    {site: 'autoři', path: 'authors'},
     {site: 'učet', path: 'team-profile'},
   ]
 }

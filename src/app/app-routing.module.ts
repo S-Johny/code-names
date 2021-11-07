@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { GameInfoComponent } from './sites/game-info/game-info.component';
+import { AuthorsComponent } from './sites/authors/authors.component';
 import { HomeComponent } from './sites/home/home.component';
 import { LoreComponent } from './sites/lore/lore.component';
 import { SignInFormComponent } from './sites/sign-in-form/sign-in-form.component';
@@ -14,9 +14,9 @@ const routes: Routes = [
     data: { title: 'Lore' },
   },
   {
-    path: 'game-info',
-    component: GameInfoComponent,
-    data: { title: 'Game Info' },
+    path: 'authors',
+    component: AuthorsComponent,
+    data: { title: 'Authors' },
   },
   {
     path: 'team-profile',

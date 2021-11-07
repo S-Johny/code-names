@@ -1,12 +1,12 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  selector: 'app-game-info',
-  templateUrl: './game-info.component.html',
-  styleUrls: ['./game-info.component.scss'],
+  selector: 'app-authors',
+  templateUrl: './authors.component.html',
+  styleUrls: ['./authors.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class GameInfoComponent implements OnInit {
+export class AuthorsComponent implements OnInit {
 
   constructor() { }
 
