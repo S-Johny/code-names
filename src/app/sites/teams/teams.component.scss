@@ -1,0 +1,35 @@
+@import 'variables';
+
+.teams-image-left {
+  position: absolute;
+  left: 0;
+  bottom: 120px;
+}
+
+.teams-image-right {
+  position: absolute;
+  right: 0;
+  bottom: 120px;
+}
+
+.teams-text {
+  max-width: 75%;
+}
+
+.team-container {
+  margin-bottom: 10px;
+  border: 2px $text-dark solid;
+  border-radius: 10px;
+  padding: 15px;
+  line-height: 1.8em;
+}
+
+.motto {
+  overflow-wrap: break-word;
+  line-height: 1.2em;
+}
+
+.teams-container {
+  padding-bottom: 40px;
+}
+
