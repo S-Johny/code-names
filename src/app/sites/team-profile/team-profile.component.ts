@@ -1,4 +1,6 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from 'src/app/shared/auth.service';
 
 @Component({
   selector: 'app-team-profile',
@@ -6,11 +8,24 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   styleUrls: ['./team-profile.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TeamProfileComponent implements OnInit {
+export class TeamProfileComponent {
+  
+  loginForm: FormGroup;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(
+    private readonly auth: AuthService,
+    private readonly fb: FormBuilder,
+  ) { 
+    this.loginForm = this.fb.group({
+      email: ['', Validators.compose([Validators.required, Validators.email])],
+      password: ['', Validators.required],
+    });
   }
 
+  login(): void {
+    if (this.loginForm.invalid) {
+      return;
+    }
+    this.auth.login(this.loginForm.value)
+  }
 }

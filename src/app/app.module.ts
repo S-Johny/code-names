@@ -8,15 +8,19 @@ import { HomeComponent } from './sites/home/home.component';
 import { TeamsComponent } from './sites/teams/teams.component';
 import { LoreComponent } from './sites/lore/lore.component';
 import { SignInFormComponent } from './sites/sign-in-form/sign-in-form.component';
-import { LogInFormComponent } from './sites/log-in-form/log-in-form.component';
 import { TeamProfileComponent } from './sites/team-profile/team-profile.component';
 import { InputComponent } from './shared/input/input.component';
 import { environment } from 'src/environments/environment';
 
-import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
-import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AuthorsComponent } from './sites/authors/authors.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { AuthService } from './shared/auth.service';
+import { DatabaseService } from './shared/database.service';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -27,18 +31,23 @@ import { FooterComponent } from './shared/footer/footer.component';
     TeamsComponent,
     LoreComponent,
     SignInFormComponent,
-    LogInFormComponent,
     TeamProfileComponent,
     InputComponent,
     AuthorsComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideFirestore(() => getFirestore()),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    ReactiveFormsModule,
+    MatSnackBarModule,
   ],
-  providers: [],
+  providers: [
+    AuthService,
+    DatabaseService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

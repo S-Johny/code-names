@@ -1,1 +1,23 @@
-<p>team-profile works!</p>
+<div class="log-in-container">
+    <div class="site-content">
+        <h1>Prihlaseni</h1>
+        <div>Prihlste se prosim pro vytvoreni a zmeny v team.
+        </div>
+
+        <div class="separating-line"></div>
+
+        <form class="log-in-form" (ngSubmit)="login()" [formGroup]="loginForm">
+            <app-input label='Email'>
+                <input type="email" formControlName="email">
+            </app-input>
+          
+            <app-input label='Password'>
+              <input type="password" formControlName="password">
+          </app-input>
+
+          <button class="button" type="submit">Přihlásit se</button>
+        </form>
+
+    </div>
+</div>
+

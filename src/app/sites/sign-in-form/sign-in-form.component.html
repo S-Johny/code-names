@@ -7,14 +7,16 @@
 
         <div class="separating-line"></div>
 
-        <form action="" class="sign-in-form">
+        <form class="sign-in-form" (ngSubmit)="register()" [formGroup]="registerForm">
             <app-input label='Email'>
-                <input type="email">
+                <input type="email" formControlName="email">
             </app-input>
           
             <app-input label='Password'>
-              <input type="password">
+              <input type="password" formControlName="password">
           </app-input>
+
+          <button class="button" type="submit">Registrace</button>
         </form>
 
     </div>
